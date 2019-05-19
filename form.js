@@ -446,41 +446,41 @@ function firebaseNewFileUpload(
   );
 }
 
-function updateDatabaseRecord(featureImageUrl, assetUrl, id, title) {
-  if (featureImageUrl != "" && assetUrl != "" && title != "") {
-    var dataUpdate = {
-      Title: title,
-      FeatureImage: featureImageUrl,
-      AssetUrl: assetUrl
-    };
-    db.child(id).update(dataUpdate);
-    console.log("data updated");
-    reset();
-    readData();
-    setTimeout(function() {
-      $(".alert-success").hide();
-    }, 3000);
-  } else if (featureImageUrl != "") {
-    var dataUpdate = {
-      FeatureImage: featureImageUrl
-    };
-    db.child(id).update(dataUpdate);
-    console.log("data updated");
-    reset();
-    readData();
-    setTimeout(function() {
-      $(".alert-success").hide();
-    }, 3000);
-  } else if (assetUrl != "") {
-    var dataUpdate = {
-      AssetUrl: assetUrl
-    };
-    db.child(id).update(dataUpdate);
-    console.log("data updated");
-    reset();
-    readData();
-    setTimeout(function() {
-      $(".alert-success").hide();
-    }, 3000);
-  }
-}
+// function updateDatabaseRecord(featureImageUrl, assetUrl, id, title) {
+//   if (featureImageUrl != "" && assetUrl != "" && title != "") {
+//     var dataUpdate = {
+//       Title: title,
+//       FeatureImage: featureImageUrl,
+//       AssetUrl: assetUrl
+//     };
+//     db.child(id).update(dataUpdate);
+//     console.log("data updated");
+//     reset();
+//     readData();
+//     setTimeout(function() {
+//       $(".alert-success").hide();
+//     }, 3000);
+//   } else if (featureImageUrl != "") {
+//     var dataUpdate = {
+//       FeatureImage: featureImageUrl
+//     };
+//     db.child(id).update(dataUpdate);
+//     console.log("data updated");
+//     reset();
+//     readData();
+//     setTimeout(function() {
+//       $(".alert-success").hide();
+//     }, 3000);
+//   } else if (assetUrl != "") {
+//     var dataUpdate = {
+//       AssetUrl: assetUrl
+//     };
+//     db.child(id).update(dataUpdate);
+//     console.log("data updated");
+//     reset();
+//     readData();
+//     setTimeout(function() {
+//       $(".alert-success").hide();
+//     }, 3000);
+//   }
+// }
